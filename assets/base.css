@@ -3,8 +3,6 @@
 }
 
 body {
-  color: var(--color-foreground);
-  background: var(--color-background);
   display: flex;
   flex-direction: column;
   margin: 0;
@@ -26,7 +24,6 @@ body {
 html {
   /* Firefox */
   scrollbar-width: thin;
-  scrollbar-color: rgb(var(--color-foreground-rgb) / var(--opacity-40)) var(--color-background);
   scroll-behavior: smooth;
 }
 
@@ -245,13 +242,6 @@ select {
   }
 }
 
-dialog {
-  /* the ::backdrop inherits from the originating element, custom properties must be set on the dialog element */
-  --backdrop-color-rgb: var(--color-shadow-rgb);
-
-  background-color: var(--color-background);
-  color: var(--color-foreground);
-}
 
 p,
 h1,
@@ -799,7 +789,7 @@ body,
   line-height: var(--font-paragraph--line-height);
   text-transform: var(--font-paragraph--case);
   -webkit-font-smoothing: antialiased;
-  color: var(--color, var(--color-foreground));
+
 }
 
 /* Ensure inputs with type presets maintain minimum 16px on mobile to prevent iOS zoom */
@@ -826,7 +816,6 @@ h1,
   font-weight: var(--font-h1--weight);
   font-size: var(--font-h1--size);
   line-height: var(--font-h1--line-height);
-  letter-spacing: var(--font-h1--letter-spacing);
   text-transform: var(--font-h1--case);
   color: var(--color, var(--font-h1-color));
 }
@@ -847,7 +836,6 @@ h2,
   font-weight: var(--font-h2--weight);
   font-size: var(--font-h2--size);
   line-height: var(--font-h2--line-height);
-  letter-spacing: var(--font-h2--letter-spacing);
   text-transform: var(--font-h2--case);
   color: var(--color, var(--font-h2-color));
 }
@@ -869,7 +857,6 @@ h3,
   font-weight: var(--font-h3--weight);
   font-size: var(--font-h3--size);
   line-height: var(--font-h3--line-height);
-  letter-spacing: var(--font-h3--letter-spacing);
   text-transform: var(--font-h3--case);
   color: var(--color, var(--font-h3-color));
 }
@@ -889,8 +876,7 @@ h4,
   font-style: var(--font-h4--style);
   font-weight: var(--font-h4--weight);
   font-size: var(--font-h4--size);
-  line-height: var(--font-h4--line-height);
-  letter-spacing: var(--font-h4--letter-spacing);
+  line-height: var(--font-h4--line-height);=
   text-transform: var(--font-h4--case);
   color: var(--color, var(--font-h4-color));
 }
@@ -911,7 +897,6 @@ h5,
   font-weight: var(--font-h5--weight);
   font-size: var(--font-h5--size);
   line-height: var(--font-h5--line-height);
-  letter-spacing: var(--font-h5--letter-spacing);
   text-transform: var(--font-h5--case);
   color: var(--color, var(--font-h5-color));
 }
@@ -932,7 +917,6 @@ h6,
   font-weight: var(--font-h6--weight);
   font-size: var(--font-h6--size);
   line-height: var(--font-h6--line-height);
-  letter-spacing: var(--font-h6--letter-spacing);
   text-transform: var(--font-h6--case);
   color: var(--color, var(--font-h6-color));
 }
@@ -2334,8 +2318,7 @@ product-price.text-block:is(.h1, .h2, .h3, .h4, .h5, .h6) > *:not(.tax-note) {
   font-weight: var(--font-weight);
   text-transform: var(--text-transform);
   text-wrap: var(--text-wrap);
-  line-height: var(--line-height);
-  letter-spacing: var(--letter-spacing);
+  line-height: var(--line-height);=
 }
 
 .custom-typography {

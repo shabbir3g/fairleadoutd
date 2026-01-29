@@ -36,9 +36,10 @@
     {% endif %}
 
     {{ content_for_header }}
+    {{ 'ms-style.css' | asset_url | stylesheet_tag }}
   </head>
 
-  <body class="page-width-{{ settings.page_width }} card-hover-effect-{{ settings.card_hover_effect }}">
+  <body class="{{ template.name | handleize }}{% if template.suffix %} {{ template.name | handleize }}-{{ template.suffix | handleize }}{% endif %}{% if product %} product-{{ product.handle }}{% endif %}{% if collection %} collection-{{ collection.handle }}{% endif %}{% if page %} page-{{ page.handle }}{% endif %}  page-width-{{ settings.page_width }} card-hover-effect-{{ settings.card_hover_effect }}">
     {% render 'skip-to-content-link', href: '#MainContent', text: 'accessibility.skip_to_text' %}
     <div id="header-group">
       {% sections 'header-group' %}

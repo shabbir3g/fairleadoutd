@@ -1,0 +1,197 @@
+@import url("base.css");
+
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+
+:root {
+
+     /* --- Primary and Typography Color --- */
+    --color-white: #ffffff;      /* White */
+    --color-black: #131413;    /* Black */
+    --color-subtext: #6B6B6B;      /* Subtext */
+    --color-error: #942521;   /* Error Red */
+
+    /* --- Border Color --- */
+    --color-stroke-1: #E2DDD0;    /* Stroke 1 */
+    --color-stroke-2: #C3C3C3;    /* Stroke 2 */
+
+    /* --- Background Colors --- */
+    --color-bg-primary: #F7F5F2;      /* Primary Background */
+
+    /* Font Families */
+    --font-family-primary: "Montserrat", sans-serif;
+    --font-family-secondary: "Nunito Sans", sans-serif;
+
+    
+    /* Global Text Settings */
+    font-size: 16px;
+
+    /* --- Heading Scale (Canela Trial) --- */
+    --text-xl-size: 72px;
+    --text-xl-line-height: 1.111;
+    --text-lg-size: 48px;
+    --text-lg-line-height: 1.166;
+    --text-md-size: 36px;
+    --text-md-line-height: 52px;
+    --text-md2-size: 28px;
+    --text-md2-line-height: 36px;
+    --text-sm-size: 24px;
+    --text-sm-line-height: 40px;
+    --text-sm2-line-height: 1.50;
+
+
+
+
+    /* --- Body Scale  --- */
+    --text-body-1-size: 20px;
+    --text-body-1-line-height: 1.60;
+    --text-body-2-size: 18px;
+    --text-body-2-line-height: 28px;
+    --text-body-3-size: 16px;
+    --text-body-3-line-height: 24px;
+    --text-body-4-size: 14px;
+    --text-body-4-line-height: 22px;
+    --text-body-5-size: 12px;
+    --text-body-5-line-height: 20px;
+    --text-btn-size: 16px;
+
+
+    /* Font Weights */
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+
+    
+}
+
+@media (max-width: 768px) {
+    :root {
+        /* Mobile Heading Scale Overrides (using px as requested) */
+
+        --text-xl-size: 40px;
+        --text-xl-line-height: 44px;
+        --text-lg-size: 24px;
+        --text-lg-line-height: 36px;
+        --text-md-size: 18px;
+        --text-md-line-height: 24px;
+        --text-md2-line-height: 20px;
+
+        /* --- Body Scale  --- */
+        --text-body-1-size: 16px;
+        --text-body-1-line-height: 24px;
+        --text-body-2-size: 14px;
+        --text-body-2-line-height: 20px;
+        --text-body-2-2-line-height: 32px;
+        
+    
+    }
+}
+
+
+/* * Apply base styles globally */
+body {
+    font-family: var(--font-family-secondary);
+    font-size: var(--text-body-1-size);
+    color: var(--color-black);
+    line-height: var(--text-body-1-line-height);
+}
+
+/* Apply Canela Trial font to all native heading elements */
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: var(--font-family-primary);
+    color: var(--color-black);
+}
+/* p, a, span, li, div {
+    font-family: var(--font-family-secondary);
+} */
+
+
+
+/* Specific styling for the standard H1-H6 elements */
+h1, .h1 { 
+    font-size: var(--text-xl-size); 
+    line-height: var(--text-xl-line-height); 
+}
+h2, .h2 { 
+    font-size: var(--text-lg-size); 
+    line-height: var(--text-lg-line-height); 
+}
+h3, .h3 { 
+    font-size: var(--text-md-size); 
+    line-height: var(--text-md-line-height); 
+}
+h4, .h4 { 
+    font-size: var(--text-md2-size); 
+    line-height: var(--text-md2-line-height); 
+}
+h5, .h5 { 
+    font-size: var(--text-sm-size); 
+    line-height: var(--text-sm-line-height);
+}
+h6, .h6 { 
+    font-size: var(--text-sm-size); 
+    line-height: var(--text-sm2-line-height); 
+}
+
+
+/* Body classes for different font sizes */
+.text-body-1 { 
+    font-size: var(--text-body-1-size); 
+    line-height: var(--text-body-1-line-height); 
+}
+.text-body-2 { 
+    font-size: var(--text-body-2-size); 
+    line-height: var(--text-body-2-line-height); 
+}
+.text-body-3 { 
+    font-size: var(--text-body-3-size); 
+    line-height: var(--text-body-3-line-height); 
+}
+.text-body-4 { 
+    font-size: var(--text-body-4-size); 
+    line-height: var(--text-body-4-line-height); 
+}
+.text-body-5 { 
+    font-size: var(--text-body-5-size); 
+    line-height: var( --text-body-5-line-height); 
+}
+
+/* Button text style */
+.ms-primary-btn { 
+    background: var(--color-white);
+    height: 72px;
+    padding: 16px 40px;
+    justify-content: center;
+    align-items: center;
+    font-size: var(--text-btn-size);
+    color: var(--color-black);
+    text-align: center;
+    font-family: var(--font-family-primary);
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 2.4px;
+    text-transform: uppercase;
+    display: flex;
+    width: 286px;
+}
+.ms-primary-sm-btn { 
+    background: var(--color-white);
+    height: 48px;
+    padding: 16px 40px;
+    justify-content: center;
+    align-items: center;
+    font-size: var(--text-btn-size);
+    color: var(--color-black);
+    text-align: center;
+    font-family: var(--font-family-primary);
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 2.4px;
+    text-transform: uppercase;
+    display: flex;
+    width: 286px;
+}
