@@ -608,6 +608,7 @@
       ],
       "name": "FAQ Custom Section",
       "settings": {
+        "left_image": "shopify://shop_images/Frame.webp",
         "heading": "",
         "open_first": true,
         "button_label": "VIEW DETAILS",
