@@ -15,7 +15,7 @@
       "type": "announcement-bar",
       "blocks": {
         "announcement-bar-0": {
-          "type": "announcement",
+          "type": "announchment_item",
           "settings": {
             "link": ""
           }

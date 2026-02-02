@@ -53,7 +53,7 @@
       autoplay: true,
       pagination: false, 
       arrows: false,
-      perPage: 5.5,
+      perPage: 5.2,
       perMove: 1,
       breakpoints: {
         640: {
@@ -142,7 +142,7 @@ splide.mount();
 
 {% schema %}
 {
-  "name": "t:names.announcement_bar",
+  "name": "Announcement Bar",
 
   "enabled_on": {
     "groups": ["header"]
@@ -154,85 +154,20 @@ splide.mount();
       "label": "Customer Service Link"
     },
     {
-      "type": "range",
-      "id": "speed",
-      "label": "t:settings.scroll_speed",
-      "min": 2,
-      "max": 10,
-      "default": 5,
-      "unit": "sec"
-    },
-    {
       "type": "header",
-      "content": "t:content.appearance"
-    },
-    {
-      "type": "select",
-      "id": "section_width",
-      "label": "t:settings.section_width",
-      "options": [
-        {
-          "value": "page-width",
-          "label": "t:options.page"
-        },
-        {
-          "value": "full-width",
-          "label": "t:options.full"
-        }
-      ],
-      "default": "page-width"
-    },
-    {
-      "type": "color_scheme",
-      "id": "color_scheme",
-      "default": "scheme-4",
-      "label": "t:settings.color_scheme"
-    },
-    {
-      "type": "range",
-      "id": "divider_width",
-      "label": "t:settings.divider_thickness",
-      "min": 0,
-      "max": 5,
-      "step": 0.5,
-      "unit": "px",
-      "default": 0
-    },
-    {
-      "type": "header",
-      "content": "t:content.padding"
-    },
-    {
-      "type": "range",
-      "id": "padding-block-start",
-      "label": "t:settings.top",
-      "min": 0,
-      "max": 100,
-      "step": 1,
-      "unit": "px",
-      "default": 15
-    },
-    {
-      "type": "range",
-      "id": "padding-block-end",
-      "label": "t:settings.bottom",
-      "min": 0,
-      "max": 100,
-      "step": 1,
-      "unit": "px",
-      "default": 15
+      "content": "header"
     }
+  
   ],
   "blocks": [
     {
       "type": "announchment_item",
-      "name": "t:names.announcement",
+      "name": "Announcement",
       "settings": [
     {
       "type": "inline_richtext",
       "id": "announchment_text",
-      "label": "t:settings.text",
-      "default": "t:text_defaults.shop_our_latest_arrivals"
+      "label": "Announchment Text"
     }
     // {
     //   "type": "url",
@@ -245,7 +180,7 @@ splide.mount();
   ],
   "presets": [
     {
-      "name": "t:names.announcement_bar",
+      "name": "Announcement Bar",
       "blocks": [
         { "type": "announchment_item" },
         { "type": "announchment_item" },
