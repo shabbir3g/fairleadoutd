@@ -1,0 +1,220 @@
+{% comment %}
+  FAQ section for custom typography styles
+{% endcomment %}
+
+{%- style -%}
+    .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.50 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.50 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+
+  
+
+{%- endstyle -%}
+
+
+<div class="faq-section-wrapper faq-section-{{ section.id }} color-{{ section.settings.color_scheme }} gradient{% if section.settings.background_image != blank %} has-background{% endif %}">
+    <div class="faq-section isolate{% unless section.settings.full_width %} page-width {% endunless %} section-{{ section.id }}-padding">
+    
+
+    <div class="faq-image">
+        {% if section.settings.left_image != blank %}
+        {{ section.settings.left_image | image_url: width: 300 | image_tag }}
+        {% endif %}
+    </div>
+    <div class="faq-content">
+
+        {%- liquid
+        # Assign the tag name from your select setting (h1, h2, etc.)
+        assign heading_tag = section.settings.heading_size | default: 'h2'
+        -%}
+
+         {% if section.settings.heading != blank %}
+       
+        <{{ heading_tag }}>{{ section.settings.heading }}</{{ heading_tag }}>
+
+        {% else %}
+
+        <{{ heading_tag }}>{{ section.settings.heading }}</{{ heading_tag }}>
+       
+        {% endif %}
+        
+        <div class="faq-list">
+
+        {%- for block in section.blocks -%}
+        {%- if block.settings.question != blank and block.settings.answer != blank -%}
+          <details class="faq-item" {{ block.shopify_attributes }} {% if forloop.first and section.settings.open_first %}open{% endif %}>
+            <summary class="faq-question text-body-1">
+              {{ block.settings.question }}
+              <span class="icon"></span>
+            </summary>
+            <div class="faq-answer text-body-3">
+              {{ block.settings.answer }}
+            </div>
+          </details>
+        {%- endif -%}
+      {%- endfor -%}
+    
+      </div>
+
+        
+      
+{%- if section.settings.button_label != blank -%}
+      <div class="faq-button">
+        {% render 'button', 
+            link: section.settings.button_link, 
+            label: section.settings.button_label,
+            style_class: "ms-tertiary-btn"
+        %}
+      </div>
+    {%- endif -%}
+
+    </div>
+       
+    
+    </div>
+</div>
+
+{% schema %}
+{
+  "name": "FAQ Custom Section",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "image_picker",
+      "id": "left_image",
+      "label": "Left Image"
+    },
+    {
+      "type": "richtext",
+      "id": "heading",
+      "label": "Heading"
+    },
+    {
+      "type": "checkbox",
+      "id": "open_first",
+      "label": "Open first item by default",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Button Settings"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button Label",
+      "default": "VIEW DETAILS"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "options": [
+        {
+          "value": "h1",
+          "label": "Extra Large"
+        },
+        {
+          "value": "h2",
+          "label": "Large"
+        },
+        {
+          "value": "h3",
+          "label": "Medium"
+        },
+        {
+          "value": "h4",
+          "label": "Extra Medium"
+        },
+        {
+          "value": "h5",
+          "label": "Small"
+        },
+        {
+          "value": "h6",
+          "label": "Extra Small"
+        }
+
+      ],
+      "default": "h2",
+      "label": "Heading size"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding top",
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding bottom",
+      "default": 80
+    }
+  ],
+  "blocks": [
+    {
+      "type": "faq_item",
+      "name": "FAQ Item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "question",
+          "label": "Question",
+          "default": "How does your online returns policy work?"
+        },
+        {
+          "type": "richtext",
+          "id": "answer",
+          "label": "Answer",
+          "default": "<p>We offer hassle-free returns within 30 days of purchase.</p>"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "FAQ Custom Section",
+      "blocks": [
+        { "type": "faq_item" },
+        { "type": "faq_item" },
+        { "type": "faq_item" }
+        ]
+    }
+  ]
+}
+{% endschema %}

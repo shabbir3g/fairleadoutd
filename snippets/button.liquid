@@ -1,20 +1,22 @@
 {%- doc -%}
-  Intended for use in a block similar to the button block.
-
   @param {string} link - link to render
   @param {object} [block] - The block
+  @param {string} [label] - Fallback label if block is missing
+  @param {string} [width] - Custom width (e.g., '200px', '100%', 'auto')
+  @param {string} [style_class] - Additional CSS class for styling
 
   @example
-  {% render 'button', link: '/collections/all' %}
+  {% render 'button', link: '/collections/all', label: 'Shop Now', width: '300px' %}
 {%- enddoc -%}
-
 {%- liquid
   assign block_settings = block.settings
   assign button_label = block_settings.label | default: label
-  assign class = block_settings.style_class | default: 'link'
+  
+  # This line ensures it looks for the passed 'style_class' variable
+  assign final_style_class = style_class | default: block_settings.style_class | default: 'link'
+  
+  assign button_width = width | default: block_settings.button_width | default: 'auto'
 -%}
-
-
 
 <a
   {% if link == blank %}
@@ -23,7 +25,8 @@
   {% else %}
     href="{{ link }}"
   {% endif %}
-  class="size-style {{ style_class }}" style="{% render 'size-style', settings: block_settings %}"
+  class="size-style {{ final_style_class }}" 
+  style="{% render 'size-style', settings: block_settings %}; width: {{ button_width }}; display: inline-flex; justify-content: center; align-items: center;"
   {%- if block_settings.open_in_new_tab -%}
     target="_blank"
     rel="noopener noreferrer"
@@ -32,15 +35,3 @@
 >
   {{ button_label }}
 </a>
-
-{% stylesheet %}
-  .link {
-    text-decoration: none;
-    text-decoration-color: currentcolor;
-
-    &:hover {
-      color: var(--color-primary-hover);
-      text-decoration-color: transparent;
-    }
-  }
-{% endstylesheet %}

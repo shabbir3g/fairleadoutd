@@ -3,7 +3,7 @@
   testing section for custom typography styles description
 {% endcomment %}
 
-{{ 'test.css' | asset_url | stylesheet_tag }}
+{% comment %} {{ 'test.css' | asset_url | stylesheet_tag }} {% endcomment %}
 
 {%- style -%}
     .section-{{ section.id }}-padding {
@@ -41,8 +41,8 @@
         
         {% render 'button', 
             link: '/collections/all', 
-            label:  "Shop All",
-            style_class: "ms-primary-sm-btn"
+            label:  "Read Our Story",
+            style_class: "ms-secondary-cart-btn"
         %}
     
     </div>
