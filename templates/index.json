@@ -9,137 +9,86 @@
  */
 {
   "sections": {
-    "hero_jVaWmY": {
-      "type": "hero",
+    "hero-slideshow": {
+      "type": "slideshow",
       "blocks": {
-        "text_YLPk4p": {
-          "type": "text",
-          "name": "t:names.heading",
+        "slide-0": {
+          "type": "slide",
           "settings": {
-            "text": "<p>Browse our latest products</p>",
-            "width": "fit-content",
-            "max_width": "normal",
-            "alignment": "left",
-            "type_preset": "h2",
-            "font": "var(--font-body--family)",
-            "font_size": "1rem",
-            "line_height": "normal",
-            "letter_spacing": "normal",
-            "case": "none",
-            "wrap": "pretty",
-            "color": "var(--color-foreground-heading)",
-            "background": false,
-            "background_color": "#00000026",
-            "corner_radius": 0,
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {}
-        },
-        "button_H9gpTf": {
-          "type": "button",
-          "name": "t:names.button",
-          "settings": {
-            "label": "Shop all",
-            "link": "shopify://collections/all",
-            "open_in_new_tab": false,
-            "style_class": "button-secondary",
-            "width": "fit-content",
-            "custom_width": 100,
-            "width_mobile": "fit-content",
-            "custom_width_mobile": 100
-          },
-          "blocks": {}
+            "image_overlay_opacity": 0,
+            "heading": "Image slide",
+            "heading_size": "h1",
+            "subheading": "",
+            "button_label": "Button label",
+            "link": "shopify://collections",
+            "button_style_secondary": false,
+            "show_text_box": false,
+            "box_align": "middle-right",
+            "text_alignment": "left",
+            "text_alignment_mobile": "center",
+            "color_scheme": "scheme-1"
+          }
         }
       },
       "block_order": [
-        "text_YLPk4p",
-        "button_H9gpTf"
+        "slide-0"
       ],
-      "name": "t:names.hero",
       "settings": {
-        "media_type_1": "image",
-        "media_type_2": "image",
-        "stack_media_on_mobile": false,
-        "custom_mobile_media": false,
-        "media_type_1_mobile": "image",
-        "media_type_2_mobile": "image",
-        "link": "",
-        "open_in_new_tab": false,
-        "content_direction": "column",
-        "vertical_on_mobile": true,
-        "horizontal_alignment": "space-between",
-        "vertical_alignment": "flex-end",
-        "align_baseline": true,
-        "horizontal_alignment_flex_direction_column": "center",
-        "vertical_alignment_flex_direction_column": "flex-end",
-        "gap": 24,
-        "section_width": "page-width",
-        "section_height": "medium",
-        "section_height_custom": 50,
-        "color_scheme": "scheme-6",
-        "toggle_overlay": true,
-        "overlay_color": "#12121266",
-        "overlay_style": "solid",
-        "gradient_direction": "to bottom",
-        "blurred_reflection": false,
-        "reflection_opacity": 75,
-        "padding-block-start": 100,
-        "padding-block-end": 72
+        "layout": "full_bleed",
+        "slide_height": "small",
+        "slider_visual": "dots",
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "image_behavior": "none",
+        "show_text_below": true,
+        "accessibility_info": "Slideshow about our brand"
       }
     },
-    "ms_faq_section_H3xyKa": {
+    "ms_test_jbkanX": {
+      "type": "ms-test",
+      "name": "MS Custom Testing Section",
+      "settings": {
+        "heading": "",
+        "heading_size": "h0",
+        "color_scheme": "",
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    },
+    "ms_faq_section_tQzVBy": {
       "type": "ms-faq-section",
       "blocks": {
-        "faq_item_YrjTUE": {
+        "faq_item_3adanK": {
           "type": "faq_item",
           "settings": {
             "question": "How does your online returns policy work?",
-            "answer": "<p>We offer hassle-free returns within 30 days of purchase. Items must be in their original condition with tags attached. Please visit our Returns page for more details and to initiate a return.</p>"
+            "answer": "<p>We offer hassle-free returns within 30 days of purchase.</p>"
           }
         },
-        "faq_item_xkW9g9": {
+        "faq_item_q7WPLd": {
           "type": "faq_item",
           "settings": {
-            "question": "Which countries do you deliver to?",
-            "answer": "<p>We offer hassle-free returns within 30 days of purchase. Items must be in their original condition with tags attached. Please visit our Returns page for more details and to initiate a return.</p>"
+            "question": "How does your online returns policy work?",
+            "answer": "<p>We offer hassle-free returns within 30 days of purchase.</p>"
           }
         },
-        "faq_item_wnhjE6": {
+        "faq_item_GdUzWV": {
           "type": "faq_item",
           "settings": {
-            "question": "How can I collect my order in-store?",
-            "answer": "<p>We offer hassle-free returns within 30 days of purchase. Items must be in their original condition with tags attached. Please visit our Returns page for more details and to initiate a return.</p>"
-          }
-        },
-        "faq_item_EEhp8N": {
-          "type": "faq_item",
-          "settings": {
-            "question": "Is it possible to buy a physical gift card?",
-            "answer": "<p>We offer hassle-free returns within 30 days of purchase. Items must be in their original condition with tags attached. Please visit our Returns page for more details and to initiate a return.</p>"
-          }
-        },
-        "faq_item_exAWkx": {
-          "type": "faq_item",
-          "settings": {
-            "question": "Which countries accept Afterpay?",
-            "answer": "<p>We offer hassle-free returns within 30 days of purchase. Items must be in their original condition with tags attached. Please visit our Returns page for more details and to initiate a return.</p>"
+            "question": "How does your online returns policy work?",
+            "answer": "<p>We offer hassle-free returns within 30 days of purchase.</p>"
           }
         }
       },
       "block_order": [
-        "faq_item_YrjTUE",
-        "faq_item_xkW9g9",
-        "faq_item_wnhjE6",
-        "faq_item_EEhp8N",
-        "faq_item_exAWkx"
+        "faq_item_3adanK",
+        "faq_item_q7WPLd",
+        "faq_item_GdUzWV"
       ],
       "name": "FAQ Custom Section",
       "settings": {
         "left_image": "shopify://shop_images/Frame.webp",
-        "heading": "<p>Helpful Answers</p>",
+        "heading": "",
         "open_first": true,
         "button_label": "VIEW DETAILS",
         "button_link": "",
@@ -151,7 +100,8 @@
     }
   },
   "order": [
-    "hero_jVaWmY",
-    "ms_faq_section_H3xyKa"
+    "hero-slideshow",
+    "ms_test_jbkanX",
+    "ms_faq_section_tQzVBy"
   ]
 }

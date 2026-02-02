@@ -252,6 +252,15 @@ h6, .h6 {
     padding-bottom:6px;
 }
 
+
+/* Header style  */
+
+header-component#header-component {
+    height: 82px;
+    display: flex;
+}
+
+
 /* faq section style */
 .faq-section-wrapper{
     
