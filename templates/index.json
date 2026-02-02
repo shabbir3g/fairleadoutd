@@ -100,25 +100,41 @@
             "answer": "<p>We offer hassle-free returns within 30 days of purchase. Items must be in their original condition with tags attached. Please visit our Returns page for more details and to initiate a return.</p>"
           }
         },
-        "faq_item_eiWfpG": {
+        "faq_item_xkW9g9": {
           "type": "faq_item",
           "settings": {
-            "question": "How does your online returns policy work?",
-            "answer": "<p>We offer hassle-free returns within 30 days of purchase.</p>"
+            "question": "Which countries do you deliver to?",
+            "answer": "<p>We offer hassle-free returns within 30 days of purchase. Items must be in their original condition with tags attached. Please visit our Returns page for more details and to initiate a return.</p>"
           }
         },
-        "faq_item_4QfBYQ": {
+        "faq_item_wnhjE6": {
           "type": "faq_item",
           "settings": {
-            "question": "How does your online returns policy work?",
-            "answer": "<p>We offer hassle-free returns within 30 days of purchase.</p>"
+            "question": "How can I collect my order in-store?",
+            "answer": "<p>We offer hassle-free returns within 30 days of purchase. Items must be in their original condition with tags attached. Please visit our Returns page for more details and to initiate a return.</p>"
+          }
+        },
+        "faq_item_EEhp8N": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Is it possible to buy a physical gift card?",
+            "answer": "<p>We offer hassle-free returns within 30 days of purchase. Items must be in their original condition with tags attached. Please visit our Returns page for more details and to initiate a return.</p>"
+          }
+        },
+        "faq_item_exAWkx": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Which countries accept Afterpay?",
+            "answer": "<p>We offer hassle-free returns within 30 days of purchase. Items must be in their original condition with tags attached. Please visit our Returns page for more details and to initiate a return.</p>"
           }
         }
       },
       "block_order": [
         "faq_item_YrjTUE",
-        "faq_item_eiWfpG",
-        "faq_item_4QfBYQ"
+        "faq_item_xkW9g9",
+        "faq_item_wnhjE6",
+        "faq_item_EEhp8N",
+        "faq_item_exAWkx"
       ],
       "name": "FAQ Custom Section",
       "settings": {
