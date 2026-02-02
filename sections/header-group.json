@@ -14,25 +14,19 @@
     "header_announcements_9jGBFp": {
       "type": "header-announcements",
       "blocks": {
-        "announcement_BxgCk9": {
-          "type": "_announcement",
+        "announchment_item_T7Ndtt": {
+          "type": "announchment_item",
           "settings": {
-            "text": "Welcome to our store",
-            "link": "",
-            "font": "var(--font-subheading--family)",
-            "font_size": "0.75rem",
-            "weight": "",
-            "letter_spacing": "normal",
-            "case": "none"
-          },
-          "blocks": {}
+            "announchment_text": "tel:012548758"
+          }
         }
       },
       "block_order": [
-        "announcement_BxgCk9"
+        "announchment_item_T7Ndtt"
       ],
       "name": "t:names.announcement_bar",
       "settings": {
+        "customer_link": "tel:012548758",
         "speed": 5,
         "section_width": "page-width",
         "color_scheme": "scheme-1",
