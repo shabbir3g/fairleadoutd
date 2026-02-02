@@ -19,10 +19,17 @@
           "settings": {
             "announchment_text": "Delivered within a week"
           }
+        },
+        "announchment_item_gbTTbz": {
+          "type": "announchment_item",
+          "settings": {
+            "announchment_text": "In stock in South Florida"
+          }
         }
       },
       "block_order": [
-        "announchment_item_T7Ndtt"
+        "announchment_item_T7Ndtt",
+        "announchment_item_gbTTbz"
       ],
       "name": "t:names.announcement_bar",
       "settings": {
