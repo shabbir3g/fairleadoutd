@@ -88,7 +88,7 @@
       "name": "FAQ Custom Section",
       "settings": {
         "left_image": "shopify://shop_images/Frame.webp",
-        "heading": "",
+        "heading": "<p>Helpful Answers</p>",
         "open_first": true,
         "button_label": "VIEW DETAILS",
         "button_link": "",
