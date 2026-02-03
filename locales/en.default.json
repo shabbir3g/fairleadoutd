@@ -275,7 +275,7 @@
       "subtext": "404"
     }
   },
-  "sections": {
+  "sections": { 
     "announcements": {
       "previous_announcement": "Previous announcement",
       "next_announcement": "Next announcement",
