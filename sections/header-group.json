@@ -19,10 +19,17 @@
           "settings": {
             "announchment_text": "Delivered within a week"
           }
+        },
+        "announchment_item_7yagia": {
+          "type": "announchment_item",
+          "settings": {
+            "announchment_text": "In stock in South Florida"
+          }
         }
       },
       "block_order": [
-        "announcement-bar-0"
+        "announcement-bar-0",
+        "announchment_item_7yagia"
       ],
       "settings": {
         "customer_link": ""
