@@ -255,9 +255,13 @@ h6, .h6 {
 
 /* Header style  */
 
-header-component#header-component {
+header.header {
     height: 82px;
-    display: flex;
+    padding-top: 0;
+    padding-bottom: 0;
+    .header__heading-logo{
+         width: 130px ;
+    }
 }
 
 
@@ -273,6 +277,10 @@ header-component#header-component {
 
     .faq-image {
         width: 50%;
+        img{
+            height: 927px;
+            width: 100%;
+        }
     }
     .faq-content {
         width: 50%;
